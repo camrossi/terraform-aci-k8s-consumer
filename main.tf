@@ -8,5 +8,6 @@ data "terraform_remote_state" "network" {
   }
 }
 
-
-
+output "instance_ip_addr" {
+      value = data.terraform_remote_state.network.frontend_service
+}
