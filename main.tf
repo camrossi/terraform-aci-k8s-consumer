@@ -8,7 +8,5 @@ data "terraform_remote_state" "network" {
   }
 }
 
-data "frontend_service" "guestbook" {
-    value = data.terraform_remote_state.network.outputs.frontend_service
-}
+
 
